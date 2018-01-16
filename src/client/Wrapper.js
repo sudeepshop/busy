@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { LocaleProvider, Layout } from 'antd';
 import enUS from 'antd/lib/locale-provider/en_US';
-import { getAvailableLocale } from './translations';
+import { getAvailableLocale, getTranslationsByLocale } from './translations';
 
 import {
   getIsLoaded,
@@ -110,9 +110,10 @@ export default class Wrapper extends React.PureComponent {
 
   loadLocale(locale) {
     const availableLocale = getAvailableLocale(locale);
+    const translationsLocale = getTranslationsByLocale(locale);
 
     const localeDataPromise = import(`react-intl/locale-data/${availableLocale}`);
-    const translationsPromise = import(`./locales/${availableLocale}.json`);
+    const translationsPromise = import(`./locales/${translationsLocale}.json`);
 
     Promise.all([localeDataPromise, translationsPromise]).then(([localeData, translations]) => {
       addLocaleData(localeData);
