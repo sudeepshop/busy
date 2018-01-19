@@ -5,7 +5,7 @@ module.exports = {
    */
   apps: [
     {
-      name: 'busy',
+      name: 'powernepal',
       script: 'busy.server.js',
       instances: 4,
       exec_mode: 'cluster',
