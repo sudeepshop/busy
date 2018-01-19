@@ -17,7 +17,7 @@ module.exports = {
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
         ENABLE_LOGGER: JSON.stringify(process.env.ENABLE_LOGGER),
-        IMG_HOST: JSON.stringify(process.env.IMG_HOST || 'https://img.busy.org'),
+        IMG_HOST: JSON.stringify(process.env.IMG_HOST || 'https://pranishbusy.herokuapp.com'),
         SENTRY_PUBLIC_DSN: null,
         STEEMCONNECT_CLIENT_ID: JSON.stringify(process.env.STEEMCONNECT_CLIENT_ID || 'upvotebaby'),
         STEEMCONNECT_REDIRECT_URL: JSON.stringify(
