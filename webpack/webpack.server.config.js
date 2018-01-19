@@ -41,12 +41,12 @@ module.exports = {
       maxChunks: 1,
     }),
     new webpack.DefinePlugin({
-      'process.env.IMG_HOST': JSON.stringify(process.env.IMG_HOST || 'https://img.busy.org'),
+      'process.env.IMG_HOST': JSON.stringify(process.env.IMG_HOST || 'https://pranishbusy.herokuapp.com'),
       'process.env.STEEMCONNECT_CLIENT_ID': JSON.stringify(
         process.env.STEEMCONNECT_CLIENT_ID || 'upvotebaby',
       ),
       'process.env.STEEMCONNECT_REDIRECT_URL': JSON.stringify(
-        process.env.STEEMCONNECT_REDIRECT_URL || 'https://pranishbusy.herokuapp.com/',
+        process.env.STEEMCONNECT_REDIRECT_URL || 'https://pranishbusy.herokuapp.com/callback',
       ),
       'process.env.STEEMCONNECT_HOST': JSON.stringify(
         process.env.STEEMCONNECT_HOST || 'https://v2.steemconnect.com',
